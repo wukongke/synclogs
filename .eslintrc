@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "rules": {
+    "no-param-reassign": 0,
+    "max-len": [1, 150],
+    "guard-for-in": 0,
+    "no-restricted-syntax": "off",
+    "no-underscore-dangle": 0,
+    "no-bitwise": 1,
+    "global-require": 0,
+    "no-await-in-loop": 0,
+    "import/no-dynamic-require": 0
+  }
+}

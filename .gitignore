@@ -1,0 +1,11 @@
+.nyc_output
+.env
+npm-debug.log*
+coverage/
+node_modules/
+dist/
+.remote-sync.json
+.vscode/
+.idea/
+.dist/
+.DS_Store
