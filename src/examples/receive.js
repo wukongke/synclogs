@@ -2,7 +2,7 @@
 import amqp from 'amqplib';
 
 (async () => {
-  const conn = await amqp.connect('amqp://guest:he123456@120.25.57.223:5672');
+  const conn = await amqp.connect('amqp://guest:guest6@127.0.0.1:5672');
   const ch = await conn.createChannel();
   const q = 'mq-102';
   ch.assertQueue(q, { durable: true });

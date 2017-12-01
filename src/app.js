@@ -5,7 +5,7 @@ import './initDB';
 import mq from './common/mq';
 import task from './lib/task';
 
-// aliyun心跳检测
+// aliyun容器心跳检测
 http.createServer((req, res) => {
   req.setTimeout(2 * 60 * 1000);
   res.end('');
