@@ -1,6 +1,6 @@
 
 export default {
-  loglimit: 10,
+  loglimit: 10, // 每次拉取任务数量
   mqPrefix: 'ihos-dbrow-',
   mqServer: {
     vhosts: 'ihos-dbrow',
@@ -8,6 +8,6 @@ export default {
     apiPort: '15672',
     username: 'ihos-dbrow',
     password: 'ihos-dbrow',
-    maxMsgLen: 100,
+    maxMsgLen: 100, // 队列最大消息数
   },
 };
