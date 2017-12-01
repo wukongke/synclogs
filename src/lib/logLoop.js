@@ -38,7 +38,6 @@ const saveToMQ = async (logs) => {
 };
 // 判断日志是否符合规则
 const isAllowHandle = (curPolicy, log) => {
-  console.log('log: ', log);
   let res = true;
   if (log.o.$set && log.o.$set !== undefined) {
     log.o = { ...log.o.$set };
@@ -83,7 +82,6 @@ async function logHandle(oplogs, policys) {
       }
       return false;
     });
-    console.log('item: ', item);
     if (isAllowHandle(curPolicy, _.cloneDeep(item))) {
       const mVO = require(`../models/${curPolicy.modelname}`);
       const mFilter = {};
@@ -113,7 +111,6 @@ async function logHandle(oplogs, policys) {
         delete item.o.__v;
         delete item.o.hostId;
         delete item.o.hostid;
-        console.log('moduleRow: ', moduleRow);
         item.hostid = moduleRow.hostid || moduleRow.hostId || '';
         console.log('item.hostid: ', item.hostid);
       }
